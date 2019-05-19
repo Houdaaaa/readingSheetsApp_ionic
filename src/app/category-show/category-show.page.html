@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><h1>{{category.title}}</h1></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <h3> Titre :</h3>
+     <p> {{category.title}}</p> <br/>
+    <h3> Description:</h3>
+     <p> {{ category.description }}</p>
+  </div>
+
+  <div>
+  <br/>
+  <br/>
+    <ion-button color = "dark" routerLink = "/category/{{category.title}}/edit"> Modifier</ion-button>
+    <ion-button color = "dark" (click) = "deleteCategory()"> Supprimer</ion-button>
+    <ion-button color = "dark" routerLink = "/categories-show"> Précédent</ion-button>
+  </div>
+
+</ion-content>

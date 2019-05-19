@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-label>Titre</ion-label>
+    <ion-input inputmode = "text" [(ngModel)]="categoryToEdit.title" required minlength="5"></ion-input>
+
+  
+  <ion-label>Description</ion-label>
+    <ion-textarea rows="3" [(ngModel)]="categoryToEdit.description" required minlength="5"></ion-textarea>
+ 
+
+  <div>
+    <ion-button color = "dark" (click)="validation()"> Validation</ion-button>
+    <ion-button color = "dark" routerLink = "/categories-show"> Précédent</ion-button>
+  </div>
+
+</ion-content>

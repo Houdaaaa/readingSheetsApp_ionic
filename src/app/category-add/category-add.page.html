@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Ajouter une catégorie
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+      <ion-label>Titre</ion-label>
+        <ion-input inputmode = "text" [(ngModel)]="newCategory.title" required minlength="5"></ion-input>
+    
+      
+      <ion-label>Description</ion-label>
+        <ion-textarea rows="3" [(ngModel)]="newCategory.description" required minlength="5"></ion-textarea>
+     
+    
+      <div>
+        <ion-button color = "dark" (click)="validation()"> Valider</ion-button>
+        <ion-button color = "dark" routerLink = "/categories-show"> Précédent</ion-button>
+      </div>
+    
+    </ion-content>
+    
