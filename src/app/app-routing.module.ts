@@ -18,7 +18,9 @@ const routes: Routes = [
   { path: 'categories-show', loadChildren: './categories-show/categories-show.module#CategoriesShowPageModule' },
   { path: 'category/:title', loadChildren: './category-show/category-show.module#CategoryShowPageModule' },
   { path: 'category-add', loadChildren: './category-add/category-add.module#CategoryAddPageModule' },
-  { path: 'category/:title/edit', loadChildren: './category-edit/category-edit.module#CategoryEditPageModule' }
+  { path: 'category/:title/edit', loadChildren: './category-edit/category-edit.module#CategoryEditPageModule' },
+  { path: 'reading-sheets-show', loadChildren: './reading-sheets-show/reading-sheets-show.module#ReadingSheetsShowPageModule' },
+  { path: 'reading-sheets-add', loadChildren: './reading-sheets-add/reading-sheets-add.module#ReadingSheetsAddPageModule' }
 ];
 
 @NgModule({

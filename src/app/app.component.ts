@@ -11,7 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Reading sheets',
+      title: 'Accueil',
       url: '/home',
       icon: 'home'
     },
@@ -19,21 +19,14 @@ export class AppComponent {
       title: 'Categories',
       url: '/categories-show',
       icon: 'list'
+    },
+    {
+      title: 'Fiches de lecture',
+      url: '/reading-sheets-show',
+      icon: 'book'
     }
   ];
 
-  public appPagesRight = [
-    {
-      title: 'Ajouter Catégorie',
-      url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'Categories',
-      url: '/categories-show',
-      icon: 'list'
-    }
-  ];
 
   constructor(
     private platform: Platform,
