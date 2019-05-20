@@ -1,9 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>readingSheets_add</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-title>Ajout</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-label>Titre</ion-label>
+      <ion-input inputmode = "text" [(ngModel)]="newReadingSheet.Title" required minlength="5"></ion-input>
+  
+    <ion-label>Auteur</ion-label>
+      <ion-textarea rows="1" [(ngModel)]="newReadingSheet.Author" required minlength="5"></ion-textarea>
+    
+    <ion-label>Nombre de pages</ion-label>
+      <ion-input inputmode = "number" [(ngModel)]="newReadingSheet.PagesNumber" required minlength="5"></ion-input>
+  
+    <ion-label>Résumé</ion-label>
+      <ion-textarea rows="1" [(ngModel)]="newReadingSheet.Summary" required minlength="5"></ion-textarea>
+   
+    <ion-label>Analyse critique</ion-label>
+      <ion-textarea rows="1" [(ngModel)]="newReadingSheet.CriticalAnalysis" required minlength="5"></ion-textarea>
+    
+    <ion-label>Catégorie</ion-label>
+      <ion-select [(ngModel)]="newReadingSheet.category.title"  required>
+          <ion-select-option *ngFor="let category of categories">{{category.title}}</ion-select-option>
+      </ion-select>
+   
+    <div>
+      <ion-button color = "dark" (click)="validation()"> Valider</ion-button>
+      <ion-button color = "dark" routerLink = "/reading-sheets-show"> Précédent</ion-button>
+    </div>
+  
+  </ion-content>
+  

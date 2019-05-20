@@ -16,14 +16,14 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Fiches',
+      url: '/reading-sheets-show',
+      icon: 'book'
+    },
+    {
       title: 'Categories',
       url: '/categories-show',
       icon: 'list'
-    },
-    {
-      title: 'Fiches de lecture',
-      url: '/reading-sheets-show',
-      icon: 'book'
     }
   ];
 

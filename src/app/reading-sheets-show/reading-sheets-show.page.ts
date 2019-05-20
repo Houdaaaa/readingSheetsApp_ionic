@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ReadingSheetsService} from '../readingSheets.service';
-import { ReadingSheet } from '../classes/readingSheet';
+import {ReadingSheetsService} from 'src/app/readingSheets.service';
+import { ReadingSheet } from 'src/app/classes/readingSheet';
 
 @Component({
   selector: 'app-reading-sheets-show',
@@ -28,5 +28,5 @@ export class ReadingSheetsShowPage implements OnInit {
  getReadingSheets(): void {
   this.readingSheets = this.readingSheetsService.getReadingSheetsService();
   }
-  
+
 }
