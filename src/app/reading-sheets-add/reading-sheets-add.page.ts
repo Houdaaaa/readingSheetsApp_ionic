@@ -3,7 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ReadingSheet } from 'src/app/classes/readingSheet';
 import {ReadingSheetsService} from 'src/app/readingSheets.service';
 import { Category } from '../classes/category'; // classe category
-import {CategoriesService} from '../categories.service'
+import {CategoriesService} from '../categories.service';
+import {ToastController} from '@ionic/angular';
 
 @Component({
   selector: 'app-reading-sheets-add',
@@ -21,7 +22,7 @@ export class ReadingSheetsAddPage implements OnInit {
   
   categories: Category[];
 
-  constructor(private readingSheetsService: ReadingSheetsService, private categoriesService:CategoriesService, private router: Router, private route: ActivatedRoute) { 
+  constructor(private readingSheetsService: ReadingSheetsService, private categoriesService:CategoriesService, private router: Router, private route: ActivatedRoute, public toastCtrl: ToastController) { 
   }
 
   ngOnInit() {
@@ -35,11 +36,23 @@ export class ReadingSheetsAddPage implements OnInit {
   this.categories = this.categoriesService.getCategoriesService();
  }
 
+ async SheetValidated(){
+  const toast = await this.toastCtrl.create({
+    message: 'La fiche de lecture a bien été sauvegardée !',
+    duration: 1500,
+    color: "success"
+  }); 
+  toast.present();
+ }
+
  /**
   *  Creates the new reading sheet using a service
   */
  validation(){
   this.readingSheetsService.addReadingSheetService(this.newReadingSheet);
+
+  this.SheetValidated();
+
   this.router.navigate(['/reading-sheets-show']);
   }
 

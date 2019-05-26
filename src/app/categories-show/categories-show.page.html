@@ -16,7 +16,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let category of categories" routerLink="/category/{{ category.title }}">
+    <ion-item color="light" *ngFor="let category of categories" routerLink="/category/{{ category.title }}">
      {{category.title}}
     </ion-item>
   </ion-list>

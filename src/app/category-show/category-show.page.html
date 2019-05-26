@@ -5,15 +5,18 @@
 </ion-header>
 
 <ion-content>
-  <div>
-    <h3> Titre :</h3>
-     <p> {{category.title}}</p> <br/>
-    <h3> Description:</h3>
-     <p> {{ category.description }}</p>
-  </div>
+
+  <ion-item color="light">
+      <ion-label position="floating" color="dark">Titre : </ion-label>
+  </ion-item>
+  <p> {{category.title}}</p> <br/>
+  
+  <ion-item color="light">
+    <ion-label position="floating">Description : </ion-label>
+  </ion-item>
+  <p> {{ category.description }}</p>
 
   <div>
-  <br/>
   <br/>
     <ion-button color = "dark" routerLink = "/category/{{category.title}}/edit"> Modifier</ion-button>
     <ion-button color = "dark" (click) = "deleteCategory()"> Supprimer</ion-button>

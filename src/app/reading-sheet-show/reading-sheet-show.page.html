@@ -5,23 +5,39 @@
 </ion-header>
 
 <ion-content>
-    <div>
-      <h3> Titre :</h3>
-       <p> {{readingSheet.Title}}</p> <br/>
-      <h3> Auteur :</h3>
-       <p> {{ readingSheet.Author }}</p>
-      <h3>Nombre de pages:</h3>
-       <p>{{ readingSheet.PagesNumber }}</p>
-      <h3>Résumé:</h3>
-       <p>{{ readingSheet.Summary }}</p>
-      <h3>Analyse critique:</h3>
-       <p>{{ readingSheet.CriticalAnalysis }}</p>
-      <h3>Catégorie:</h3>
-       <p>{{ readingSheet.category.title }}</p>
-    </div>
+
+    <ion-item color="light">
+        <ion-label position="floating" color="dark">Titre : </ion-label>
+    </ion-item>
+    <p>{{readingSheet.Title}} </p> <br/>
+      
+      <ion-item color="light">
+        <ion-label position="floating"> <h2> Auteur : </h2></ion-label>
+      </ion-item>
+      <p> {{ readingSheet.Author }}</p>
   
+      <ion-item color="light">
+        <ion-label position="floating">Nombre de pages : </ion-label>
+      </ion-item>
+      <p>{{ readingSheet.PagesNumber }}</p>
+  
+      <ion-item color="light">
+        <ion-label position="floating">Résumé : </ion-label>       
+      </ion-item>
+      <p>{{ readingSheet.Summary }}</p>
+  
+      <ion-item color="light">
+        <ion-label position="floating">Analyse critique : </ion-label>       
+      </ion-item>
+      <p>{{ readingSheet.CriticalAnalysis }}</p>
+  
+      <ion-item color="light">
+        <ion-label position="floating">Catégorie : </ion-label>
+      </ion-item>
+      <p>{{ readingSheet.category.title }}</p>
+
     <div>
-    <br/>
+   
     <br/>
       <ion-button color = "dark" routerLink = "/reading-sheet/{{readingSheet.id}}/edit"> Modifier</ion-button>
       <ion-button color = "dark" (click) = "deleteReadingSheet()"> Supprimer</ion-button>

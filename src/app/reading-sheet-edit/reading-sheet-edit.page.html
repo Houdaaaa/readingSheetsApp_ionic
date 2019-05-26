@@ -2,34 +2,45 @@
     <ion-toolbar>
       <ion-title>Modification</ion-title>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
   
   <ion-content>
   
-    <ion-label>Titre</ion-label>
+    <ion-item color="light">
+      <ion-label position="floating" color="dark" >Titre</ion-label>
       <ion-input inputmode = "text" [(ngModel)]="readingSheetToEdit.Title" required minlength="5"></ion-input>
-  
-    <ion-label>Auteur</ion-label>
+    </ion-item>
+    
+    <ion-item color="light">
+      <ion-label position="floating" color="dark">Auteur</ion-label>
       <ion-textarea rows="1" [(ngModel)]="readingSheetToEdit.Author" required minlength="5"></ion-textarea>
-    
-    <ion-label>Nombre de pages</ion-label>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label position="floating" color="dark">Nombre de pages</ion-label>
       <ion-input inputmode = "number" [(ngModel)]="readingSheetToEdit.PagesNumber" required minlength="5"></ion-input>
-  
-    <ion-label>Résumé</ion-label>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label position="floating" color="dark">Résumé</ion-label>
       <ion-textarea rows="1" [(ngModel)]="readingSheetToEdit.Summary" required minlength="5"></ion-textarea>
-   
-    <ion-label>Analyse critique</ion-label>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label position="floating" color="dark">Analyse critique</ion-label>
       <ion-textarea rows="1" [(ngModel)]="readingSheetToEdit.CriticalAnalysis" required minlength="5"></ion-textarea>
-    
-    <ion-label>Catégorie</ion-label>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label position="floating" color="dark">Catégorie</ion-label>
       <ion-select [(ngModel)]="readingSheetToEdit.category.title"  required>
           <ion-select-option *ngFor="let category of categories">{{category.title}}</ion-select-option>
       </ion-select>
-   
+    </ion-item>
+
     <div>
       <ion-button color = "dark" (click)="validation()"> Valider</ion-button>
       <ion-button color = "dark" routerLink = "/reading-sheets-show"> Précédent</ion-button>
     </div>
   
   </ion-content>
-  

@@ -5,14 +5,16 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-label>Titre</ion-label>
-    <ion-input inputmode = "text" [(ngModel)]="categoryToEdit.title" required minlength="5"></ion-input>
-
-  
-  <ion-label>Description</ion-label>
-    <ion-textarea rows="3" [(ngModel)]="categoryToEdit.description" required minlength="5"></ion-textarea>
  
+    <ion-item color="light">
+        <ion-label position="floating" color="dark">Titre</ion-label>
+        <ion-input inputmode = "text" [(ngModel)]="categoryToEdit.title" required minlength="5"></ion-input>
+    </ion-item>
+    
+    <ion-item color="light">
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea rows="3" [(ngModel)]="categoryToEdit.description" required minlength="5"></ion-textarea>
+    </ion-item>
 
   <div>
     <ion-button color = "dark" (click)="validation()"> Validation</ion-button>
